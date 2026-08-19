@@ -10,33 +10,214 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ArticlesRouteImport } from './routes/articles'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ConsultationsRouteImport } from './routes/consultations'
+import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as EbooksRouteImport } from './routes/ebooks'
+import { Route as PujasRouteImport } from './routes/pujas'
+import { Route as SacredTreasuresRouteImport } from './routes/sacred-treasures'
+import { Route as ScheduleRouteImport } from './routes/schedule'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as ApiPublicPaymentsWebhookRouteImport } from './routes/api/public/payments/webhook'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticlesRoute = ArticlesRouteImport.update({
+  id: '/articles',
+  path: '/articles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultationsRoute = ConsultationsRouteImport.update({
+  id: '/consultations',
+  path: '/consultations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursesRoute = CoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EbooksRoute = EbooksRouteImport.update({
+  id: '/ebooks',
+  path: '/ebooks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PujasRoute = PujasRouteImport.update({
+  id: '/pujas',
+  path: '/pujas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SacredTreasuresRoute = SacredTreasuresRouteImport.update({
+  id: '/sacred-treasures',
+  path: '/sacred-treasures',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleRoute = ScheduleRouteImport.update({
+  id: '/schedule',
+  path: '/schedule',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const ApiPublicPaymentsWebhookRoute =
+  ApiPublicPaymentsWebhookRouteImport.update({
+    id: '/api/public/payments/webhook',
+    path: '/api/public/payments/webhook',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
+  '/consultations': typeof ConsultationsRoute
+  '/courses': typeof CoursesRoute
+  '/ebooks': typeof EbooksRoute
+  '/pujas': typeof PujasRoute
+  '/sacred-treasures': typeof SacredTreasuresRoute
+  '/schedule': typeof ScheduleRoute
+  '/shop': typeof ShopRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
+  '/consultations': typeof ConsultationsRoute
+  '/courses': typeof CoursesRoute
+  '/ebooks': typeof EbooksRoute
+  '/pujas': typeof PujasRoute
+  '/sacred-treasures': typeof SacredTreasuresRoute
+  '/schedule': typeof ScheduleRoute
+  '/shop': typeof ShopRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/about': typeof AboutRoute
+  '/articles': typeof ArticlesRoute
+  '/auth': typeof AuthRoute
+  '/checkout': typeof CheckoutRoute
+  '/consultations': typeof ConsultationsRoute
+  '/courses': typeof CoursesRoute
+  '/ebooks': typeof EbooksRoute
+  '/pujas': typeof PujasRoute
+  '/sacred-treasures': typeof SacredTreasuresRoute
+  '/schedule': typeof ScheduleRoute
+  '/shop': typeof ShopRoute
+  '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/api/public/payments/webhook': typeof ApiPublicPaymentsWebhookRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/articles'
+    | '/auth'
+    | '/checkout'
+    | '/consultations'
+    | '/courses'
+    | '/ebooks'
+    | '/pujas'
+    | '/sacred-treasures'
+    | '/schedule'
+    | '/shop'
+    | '/dashboard'
+    | '/api/public/payments/webhook'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/articles'
+    | '/auth'
+    | '/checkout'
+    | '/consultations'
+    | '/courses'
+    | '/ebooks'
+    | '/pujas'
+    | '/sacred-treasures'
+    | '/schedule'
+    | '/shop'
+    | '/dashboard'
+    | '/api/public/payments/webhook'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/about'
+    | '/articles'
+    | '/auth'
+    | '/checkout'
+    | '/consultations'
+    | '/courses'
+    | '/ebooks'
+    | '/pujas'
+    | '/sacred-treasures'
+    | '/schedule'
+    | '/shop'
+    | '/_authenticated/dashboard'
+    | '/api/public/payments/webhook'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AboutRoute: typeof AboutRoute
+  ArticlesRoute: typeof ArticlesRoute
+  AuthRoute: typeof AuthRoute
+  CheckoutRoute: typeof CheckoutRoute
+  ConsultationsRoute: typeof ConsultationsRoute
+  CoursesRoute: typeof CoursesRoute
+  EbooksRoute: typeof EbooksRoute
+  PujasRoute: typeof PujasRoute
+  SacredTreasuresRoute: typeof SacredTreasuresRoute
+  ScheduleRoute: typeof ScheduleRoute
+  ShopRoute: typeof ShopRoute
+  ApiPublicPaymentsWebhookRoute: typeof ApiPublicPaymentsWebhookRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +229,133 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articles': {
+      id: '/articles'
+      path: '/articles'
+      fullPath: '/articles'
+      preLoaderRoute: typeof ArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultations': {
+      id: '/consultations'
+      path: '/consultations'
+      fullPath: '/consultations'
+      preLoaderRoute: typeof ConsultationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/courses': {
+      id: '/courses'
+      path: '/courses'
+      fullPath: '/courses'
+      preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ebooks': {
+      id: '/ebooks'
+      path: '/ebooks'
+      fullPath: '/ebooks'
+      preLoaderRoute: typeof EbooksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pujas': {
+      id: '/pujas'
+      path: '/pujas'
+      fullPath: '/pujas'
+      preLoaderRoute: typeof PujasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sacred-treasures': {
+      id: '/sacred-treasures'
+      path: '/sacred-treasures'
+      fullPath: '/sacred-treasures'
+      preLoaderRoute: typeof SacredTreasuresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule': {
+      id: '/schedule'
+      path: '/schedule'
+      fullPath: '/schedule'
+      preLoaderRoute: typeof ScheduleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/api/public/payments/webhook': {
+      id: '/api/public/payments/webhook'
+      path: '/api/public/payments/webhook'
+      fullPath: '/api/public/payments/webhook'
+      preLoaderRoute: typeof ApiPublicPaymentsWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AboutRoute: AboutRoute,
+  ArticlesRoute: ArticlesRoute,
+  AuthRoute: AuthRoute,
+  CheckoutRoute: CheckoutRoute,
+  ConsultationsRoute: ConsultationsRoute,
+  CoursesRoute: CoursesRoute,
+  EbooksRoute: EbooksRoute,
+  PujasRoute: PujasRoute,
+  SacredTreasuresRoute: SacredTreasuresRoute,
+  ScheduleRoute: ScheduleRoute,
+  ShopRoute: ShopRoute,
+  ApiPublicPaymentsWebhookRoute: ApiPublicPaymentsWebhookRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
