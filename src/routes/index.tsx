@@ -88,9 +88,9 @@ function Home() {
           alt="Golden zodiac wheel among stars in a midnight sky"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover opacity-60"
+          className="absolute inset-0 h-full w-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/90 to-background" />
         <div className="starfield animate-twinkle absolute inset-0" aria-hidden />
 
         <div className="relative mx-auto max-w-7xl px-4 py-28 md:py-40">
