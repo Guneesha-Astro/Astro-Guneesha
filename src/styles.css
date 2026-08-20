@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Astro Guneesha design system.
- * Cosmic charcoal + midnight blue surfaces, warm gold accent, starlight silver text.
- * Serif (Cinzel) headings, Inter body. All colors in oklch.
+ * Astro Guneesha design system — light "YouTube" palette.
+ * White surfaces, YouTube red accent, near-black readable text,
+ * Instagram-style system sans typography at compact sizes.
  */
 
 @theme inline {
