@@ -230,8 +230,8 @@ re-publish.
 
 ## 11. What you should do next
 
-1. **Review the new look** in the preview (white + red, Instagram-style text) and tell me anything
-   you'd like adjusted.
+1. **Review the look** in the preview (dark cosmic theme with warm orange accents, compact
+   Instagram-style text) and tell me anything you'd like adjusted.
 2. **Send real content**: your bio for About, and the real names/prices for consultations, pujas,
    courses, e-books and sacred treasures — or edit them directly in the Backend tab.
 3. **Add product photos** (upload to storage or give me image links).
