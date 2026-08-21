@@ -129,10 +129,10 @@ Change a value there and it updates the nav, footer, hero, schedule page and eve
 ### 5.2 Change colors, fonts and text size
 All of it is in `src/styles.css`:
 
-- `--background` (white), `--foreground` (near-black text), `--primary` (YouTube red) — colors are
-  written in `oklch()`. To use a hex value, just replace with the equivalent oklch or use
-  `#RRGGBB` directly in the token.
-- `--font-display` / `--font-sans` — currently Roboto + the system UI stack (Instagram look).
+- `--background` (deep cosmic charcoal), `--foreground` / `--starlight` (light readable text),
+  `--gold` and `--primary` (warm amber-orange accent used on buttons, links and headings) — colors
+  are written in `oklch()`; replace a token value to re-theme the whole site.
+- `--font-display` / `--font-sans` — currently Cinzel headings + Inter body.
 - `html { font-size: 15px }` and `body { font-size: 0.933rem }` — Instagram-style compact sizing;
   raise/lower these two numbers to scale the entire site.
 
@@ -230,8 +230,8 @@ re-publish.
 
 ## 11. What you should do next
 
-1. **Review the new look** in the preview (white + red, Instagram-style text) and tell me anything
-   you'd like adjusted.
+1. **Review the look** in the preview (dark cosmic theme with warm orange accents, compact
+   Instagram-style text) and tell me anything you'd like adjusted.
 2. **Send real content**: your bio for About, and the real names/prices for consultations, pujas,
    courses, e-books and sacred treasures — or edit them directly in the Backend tab.
 3. **Add product photos** (upload to storage or give me image links).

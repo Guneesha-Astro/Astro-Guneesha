@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Astro Guneesha design system — light "YouTube" palette.
- * White surfaces, YouTube red accent, near-black readable text,
- * Instagram-style system sans typography at compact sizes.
+ * Astro Guneesha design system.
+ * Cosmic charcoal + midnight blue surfaces, warm amber-orange accent,
+ * starlight text. Cinzel headings, Inter body (Instagram-style compact sizes).
  */
 
 @theme inline {
@@ -17,11 +17,9 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --font-display:
-    "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
   --font-sans:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -63,53 +61,53 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.625rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.21 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.21 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.21 0 0);
+  --background: oklch(0.16 0.012 265);
+  --foreground: oklch(0.93 0.006 70);
+  --card: oklch(0.22 0.019 250);
+  --card-foreground: oklch(0.93 0.006 70);
+  --popover: oklch(0.2 0.019 250);
+  --popover-foreground: oklch(0.93 0.006 70);
 
-  /* legacy accent tokens remapped to the YouTube palette */
-  --gold: oklch(0.56 0.24 27);
-  --gold-soft: oklch(0.56 0.24 27 / 8%);
-  --midnight: oklch(0.97 0 0);
-  --starlight: oklch(0.21 0 0);
+  /* warm amber-orange accent (legacy token name kept) */
+  --gold: oklch(0.76 0.15 58);
+  --gold-soft: oklch(0.76 0.15 58 / 12%);
+  --midnight: oklch(0.27 0.024 248);
+  --starlight: oklch(0.9 0.02 70);
 
-  --primary: oklch(0.56 0.24 27);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.96 0 0);
-  --secondary-foreground: oklch(0.21 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.96 0 0);
-  --accent-foreground: oklch(0.21 0 0);
-  --destructive: oklch(0.56 0.24 27);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.88 0 0);
-  --ring: oklch(0.56 0.24 27 / 45%);
+  --primary: oklch(0.72 0.17 52);
+  --primary-foreground: oklch(0.17 0.014 265);
+  --secondary: oklch(0.27 0.024 248);
+  --secondary-foreground: oklch(0.93 0.006 70);
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.75 0.018 68);
+  --accent: oklch(0.31 0.03 60);
+  --accent-foreground: oklch(0.93 0.01 70);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.97 0.004 250);
+  --border: oklch(0.76 0.15 58 / 20%);
+  --input: oklch(0.34 0.03 60);
+  --ring: oklch(0.76 0.15 58 / 55%);
 
-  --chart-1: oklch(0.56 0.24 27);
-  --chart-2: oklch(0.65 0.15 30);
-  --chart-3: oklch(0.7 0.05 250);
-  --chart-4: oklch(0.5 0 0);
-  --chart-5: oklch(0.8 0 0);
+  --chart-1: oklch(0.76 0.15 58);
+  --chart-2: oklch(0.65 0.18 40);
+  --chart-3: oklch(0.7 0.08 200);
+  --chart-4: oklch(0.65 0.13 320);
+  --chart-5: oklch(0.8 0.1 90);
 
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.21 0 0);
-  --sidebar-primary: oklch(0.56 0.24 27);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.96 0 0);
-  --sidebar-accent-foreground: oklch(0.21 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.56 0.24 27 / 45%);
+  --sidebar: oklch(0.19 0.016 258);
+  --sidebar-foreground: oklch(0.92 0.008 70);
+  --sidebar-primary: oklch(0.76 0.15 58);
+  --sidebar-primary-foreground: oklch(0.17 0.014 265);
+  --sidebar-accent: oklch(0.28 0.026 60);
+  --sidebar-accent-foreground: oklch(0.93 0.006 70);
+  --sidebar-border: oklch(0.76 0.15 58 / 20%);
+  --sidebar-ring: oklch(0.76 0.15 58 / 55%);
 }
 
 .dark {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 @layer base {
@@ -118,7 +116,7 @@
   }
 
   html {
-    color-scheme: light;
+    color-scheme: dark;
     scroll-behavior: smooth;
     /* Instagram-style compact base size */
     font-size: 15px;
@@ -139,8 +137,7 @@
   h4,
   .font-display {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -155,17 +152,20 @@
 }
 
 @utility panel {
-  background-color: var(--card);
+  background-image: linear-gradient(
+    160deg,
+    oklch(0.24 0.022 250) 0%,
+    oklch(0.19 0.016 258) 100%
+  );
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 1px 2px oklch(0 0 0 / 6%);
 }
 
 @utility text-gradient-gold {
   background-image: linear-gradient(
     100deg,
-    oklch(0.56 0.24 27),
-    oklch(0.46 0.2 27)
+    oklch(0.85 0.13 72),
+    oklch(0.7 0.18 44)
   );
   background-clip: text;
   color: transparent;
@@ -173,11 +173,11 @@
 
 @utility starfield {
   background-image:
-    radial-gradient(1px 1px at 12% 22%, oklch(0.56 0.24 27 / 22%), transparent),
-    radial-gradient(1px 1px at 68% 14%, oklch(0.56 0.24 27 / 16%), transparent),
-    radial-gradient(1.5px 1.5px at 84% 62%, oklch(0.56 0.24 27 / 18%), transparent),
-    radial-gradient(1px 1px at 34% 78%, oklch(0.5 0 0 / 14%), transparent),
-    radial-gradient(1px 1px at 52% 44%, oklch(0.5 0 0 / 12%), transparent);
+    radial-gradient(1px 1px at 12% 22%, oklch(0.95 0 0 / 60%), transparent),
+    radial-gradient(1px 1px at 68% 14%, oklch(0.95 0 0 / 45%), transparent),
+    radial-gradient(1.5px 1.5px at 84% 62%, oklch(0.82 0.14 58 / 60%), transparent),
+    radial-gradient(1px 1px at 34% 78%, oklch(0.95 0 0 / 40%), transparent),
+    radial-gradient(1px 1px at 52% 44%, oklch(0.95 0 0 / 35%), transparent);
   background-repeat: no-repeat;
 }
 
